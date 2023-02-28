@@ -26,7 +26,7 @@
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
-installed = Off
+installed = On
 
 ; The canonical URL to the OJS installation (excluding the trailing slash)
 base_url = "http://localhost"
@@ -98,7 +98,7 @@ restful_urls = Off
 ; An empty string indicates that all hosts should be trusted (not recommended!)
 ; Example:
 ; allowed_hosts = '["myjournal.tld", "anotherjournal.tld", "mylibrary.tld"]'
-allowed_hosts = ''
+allowed_hosts = "[\"\"]"
 
 ; Allow the X_FORWARDED_FOR header to override the REMOTE_ADDR as the source IP
 ; Set this to "On" if you are behind a reverse proxy and you control the
@@ -122,7 +122,7 @@ enable_minified = On
 
 ; Provide a unique site ID and OAI base URL to PKP for statistics and security
 ; alert purposes only.
-enable_beacon = On
+enable_beacon = Off
 
 ; Set this to "On" if you would like to only have a single, site-wide Privacy
 ; Statement, rather than a separate Privacy Statement for each journal. Setting
@@ -201,7 +201,7 @@ locale = en_US
 client_charset = utf-8
 
 ; Database connection character set
-connection_charset = utf8
+connection_charset = Off
 
 
 ;;;;;;;;;;;;;;;;;
@@ -213,7 +213,7 @@ connection_charset = utf8
 ; Complete path to directory to store uploaded files
 ; (This directory should not be directly web-accessible)
 ; Windows users should use forward slashes
-files_dir = files
+files_dir = /home/denyherianto/projects/ojs-test-uploads
 
 ; Path to the directory to store public uploaded files
 ; (This directory should be web-accessible and the specified path
@@ -429,7 +429,7 @@ results_per_keyword = 500
 oai = On
 
 ; OAI Repository identifier
-repository_id = ojs.pkp.sfu.ca
+repository_id = dnhrnt
 
 ; Maximum number of records per request to serve via OAI
 oai_max_records = 100
